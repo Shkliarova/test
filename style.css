@@ -1,6 +1,12 @@
 :root {
     --dominant-color: #192A32;
+    --second-dominant-color: #FFFFFF;
     --bg-color: #141E55;
+    --block-container: #1A3769;
+    --raiting-bg-color: #80BEF8;
+    --hover-color: #2E9344;
+    --accent-color: #EC622B;
+    --event-text-color: #7C7C7C;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -18,12 +24,13 @@ img{
 
 .container{
     width: 100%;
-    padding: 0 15px;
     margin: 0 auto;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--dominant-color);
     background-color: var(--bg-color);
 }
@@ -48,3 +55,222 @@ body{
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+  /* HEADER */
+  .header{
+    padding-bottom: 12px;
+    padding-top: 12px;
+    background-color: var(--dominant-color);
+    color: var(--second-dominant-color);
+    text-transform: uppercase;
+  }
+
+  .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-logo{
+    background-color: var(--bg-color);
+    font-size: 20px;
+    padding: 15px 32px;
+    margin-right: 28px;
+  }
+
+  .header-nav{
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+  }
+
+  .header-nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: var(--block-container);
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .nav-svg{
+    margin-right: 10px;
+  }
+
+  .custom-select {
+    display: flex;
+    max-height: 48px;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 26px;
+    background: var(--bg-color);
+    border-radius: 16px;
+    cursor: pointer;
+    color: var(--second-dominant-color);
+    position: relative;
+    margin-right: 16px;
+}
+
+.selected-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.options {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--second-dominant-color);
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    color: var(--dominant-color);
+}
+
+.options li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: #f0f0f0;
+}
+
+.custom-select:focus-within .options {
+    display: block;
+}
+
+.options img {
+    margin-right: 10px;
+}
+
+.signup-btn{
+    color: var(--second-dominant-color);
+    padding: 12px 32px;
+    background-color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+    border-radius: 16px;
+}
+
+.login-btn{
+    color: var(--second-dominant-color);
+    padding: 12px 32px;
+    background-color: var(--hover-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    flex: 0 0 295px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.content {
+    flex: 0 0 925px;
+}
+
+.sidebar-container{
+    background-color: var(--second-dominant-color);
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.live-events{
+    margin-top: 20px;
+    background-color: var(--dominant-color);
+    color: var(--second-dominant-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 22px;
+    text-transform: uppercase;
+}
+
+.live-events-wrap{
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 14px 4px 4px;
+    gap: 18px;
+    border-radius: 60px;
+}
+
+.play-btn-wrap{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-dominant-color);
+    border-radius: 50%;
+}
+
+.live-events-text{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.events-list{
+    padding: 24px 0;
+    color: var(--event-text-color);
+    font-size: 16px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.events-list-item{
+    padding: 8px 0 8px 12px;
+}
+
+.events-list-item:hover, .events-list-item:focus{
+    background-color: var(--dominant-color);
+    color: var(--second-dominant-color);
+}
+
+.casino-container{
+    background-color: var(--second-dominant-color);
+    border-radius: 6px;
+}
+
+.casino-title{
+    background-color: var(--dominant-color);
+    padding: 20px 0;
+    color: var(--second-dominant-color);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.img-wrap{
+    display: flex;
+    gap: 10px 10px;
+    flex-wrap: wrap;
+    padding: 20px 25px;
+}
+
+.img-wrap-item{
+    width: calc((100% - 10px) / 2);
+}

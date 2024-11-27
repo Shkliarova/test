@@ -5,148 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
-    <header>
-        <div class="container">
-        <div>logo</div>
+    <header class="header">
+        <div class="container header-container">
+        <div class="header-logo">logo</div>
         <nav>
-            <ul class="list">
-                <li>
-                    <svg width="24" height="24">
-                        <use href="./images/icons.svg#Gift"></use>
+            <ul class="list header-nav">
+                <li class="header-nav-item">
+                    <svg class="nav-svg" width="24" height="24">
+                        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="Gift">
+                            <rect width="24" height="24" fill="url(#pattern0_2_541)"></rect>
+                            <defs>
+                                <pattern id="pattern0_2_541" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_2_541" transform="scale(0.0111111)"></use>
+                                </pattern>
+                                <image id="image0_2_541" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAACq0lEQVR4nO3csU4UQQDG8W9sNFErY8KphYZSI6XRUKg1D2B8AKiFR6FQ0FbfwGhifAA7iEZsNRaiVHJGtPksdonJscPNLMc3e8v3S6455m53/hnuliM3gJmZmdmJQ/IeyXWSWySH9W2L5GOS8w3j50k+IflpZPwaybsl5tBpJGdJvuV4r0herm+vE8a/IXmt9Pw6geQdkjsJ0fZt17dUP0jeLj3PokheJfk9I1pbOyRnS871VMmDA3gG4KLgOBcAPBUcp3tI3hes5FHF3iBLrugHkfv3ACwDGAC4BGClvi8mZ3zsmP3F6pKsyaOGsSuHrNKc8R81s+sQkruRGDMNY2cOCZ0z/qdmdgeVfjNMEkL4lvmz2Lw4mTPKVzL058j9Dyfw3LHn+DKB554uJFcjv96/SS6THIyMbzQyZsDq9XkvMnxVO8v/Qs5gkmcALKFaMdcBnD2Ok+qwXwA+AHgBYC2E8Cf1gcmhSV4B8BLAzezT66dNAAshhK8pg5NC1yv5HRx51CaAWykrO/XNcAmO3GQOwGLKwNTQk7gS6KukNqkvHbsAzh3pdPprGEI4P25QauhiF/rTIIQwtuNU/GXYBw4t4tAiDi3i0GZmZma9kvUfFqDc5x6xzxO6dj4xvo4WcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWgRhxZxaBGHFnFoEYcWcWiRNqGHEz+L6ZO9mWyb0Cdva+CDshu0Cf28xWP6JrtBm2/Onka1q+Nc7mOPokPfnN1AtXvj35wHZa/oenvIBVTbRZ40G6j2I82KDLRY0fvqlb2IaifDGzjmDQgLrughgPeodthdbxPZzMzMzMys0/4BjW83uAcyPtAAAAAASUVORK5CYII="></image>
+                            </defs>
+                        </symbol>
+                        <use href="#Gift"></use>
                     </svg>
-                    bonuses
+                    <span>bonuses</span>
                 </li>
-                <li>
-                    <svg width="24" height="24">
-                        <use href="./images/icons.svg#iPhone"></use>
+                <li class="header-nav-item">
+                    <svg class="nav-svg" width="24" height="24">
+                        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" id="iPhone">
+                            <rect width="24" height="24" fill="url(#pattern0_2_544)"></rect>
+                            <defs>
+                                <pattern id="pattern0_2_544" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_2_544" transform="scale(0.0111111)"></use>
+                                </pattern>
+                                <image id="image0_2_544" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAACGElEQVR4nO3dMU4UYRiH8edVE0zQ2Br1BhopvQQn2IRWjrC2egttjd7AQ9BBNJ7AhF6x0GYsZmwQE9md9y8Tnl9CwYa83+yT4YNt5gNJurTqHD4Mw23gEFgBj4HdzvU28B34BLwHXlfVj66F2kIPw/AI+AA87VpjZifAflV96RjeEnq6k49YTuTfToBnHXf2jbkHTg5ZXmSAPeB5x+Cu0KumuQkt1961dXwD7nTMDjirqrtzD+0KPXTMTamq2bt0bR06x9Aht5KLdfxKbiO5xXlHhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0iKFDDB1i6BBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0iKFDDB1i6BBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIdFnky79ccfb8I4OMXTIkkL/BNbAw+nrxfTa9TX0WF+wzrpjoY4mS3rG/4OqOj23zn3g9C8/v7Hr/oz/i978zfhVbGhJoQ/+8bUrKfp/9JZeTTvS2+n7A+Dl/7ucy/HAmz99rap7cw/t2jo+N81NaLn2rtDvmuYmtFx719axw3jM3l7H/EbHjMfszf5BqOWOns4D3Gc8H3ApjhkPjmz5tNl9FOoO4/mAK+AJV+8P5BnwkfEo1DddkSVpQ78AYKQBzCB7q80AAAAASUVORK5CYII="></image>
+                            </defs>
+                            </symbol>
+                        <use href="#iPhone"></use>
                     </svg>
-                    app
+                    <span>app</span>
                 </li>
-                <li>live</li>
-                <li>sports</li>
-                <li>more</li>
+                <li class="header-nav-item">live</li>
+                <li class="header-nav-item">sports</li>
+                <li class="header-nav-item">more</li>
             </ul>
         </nav>
-        <select name="" id="">
-            <option value="">AT</option>
-        </select>
-        <a class="link" href="">sign up</a>
-        <a class="link" href="">log in</a>
+        <div class="custom-select">
+            <div class="selected-option">
+                <img src="./images/image1943.jpg" width="24" height="24" alt="flag"> AT
+                <div>&#9660;</div>
+            </div>
+            <ul class="list options">
+                <li>
+                    <img src="./images/image1943.jpg" width="24" height="24" alt="flag"> AT
+                </li>
+                <li>
+                    <img src="./images/image1943.jpg" width="24" height="24" alt="flag"> AT
+                </li>
+            </ul>
+        </div>
+        <a class="link signup-btn" href="">sign up</a>
+        <a class="link login-btn" href="">log in</a>
         </div>
     </header>
 
-    <main>
+    <main class="main-container">
         <!-- SIDEBAR -->
-        <section>
-            <div class="container">
-            <div>
-                <div>
-                    <svg width="14" height="15">
-                        <use href="./images/icons.svg#play-btn"></use>
-                    </svg>
-                    <h3>live events (143)</h3>
+        <aside class="sidebar">
+            <div class="container sidebar-container">
+            <div class="live-events">
+                <div class="live-events-wrap">
+                <div class="play-btn-wrap">
                     <svg width="14" height="15">
                         <use href="./images/icons.svg#play-btn"></use>
                     </svg>
                 </div>
+                <h3 class="live-events-text">live events (143)</h3>
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15" id="white-play-btn">
+                        <path d="M0.636373 15C0.467596 15 0.305732 14.9342 0.186389 14.8169C0.0670463 14.6997 0 14.5408 0 14.375V0.624898C1.89327e-05 0.51629 0.0288536 0.409562 0.0836619 0.315233C0.13847 0.220904 0.21736 0.14223 0.312556 0.0869651C0.407753 0.0317006 0.515969 0.00175304 0.626538 7.46521e-05C0.737108 -0.00160373 0.846215 0.025045 0.943104 0.0773938L13.6706 6.95244C13.7703 7.0064 13.8535 7.08566 13.9115 7.18197C13.9694 7.27827 14 7.38808 14 7.49995C14 7.61181 13.9694 7.72163 13.9115 7.81793C13.8535 7.91423 13.7703 7.9935 13.6706 8.04745L0.943104 14.9225C0.849144 14.9733 0.743633 15 0.636373 15Z" fill="#FCFCFC"></path>
+                    </symbol>
+                </svg>
+                <svg width="14" height="15">
+                    <use href="#white-play-btn"></use>
+                </svg>
+                </div>
             </div>
-            <ul class="list">
-                <li>
-                    <svg>
+            <ul class="list events-list">
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     American football
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Buscetball
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Tennis
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Bascetball
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Bowling
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Box
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Football
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Golf
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Golf Club
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Skateboard
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Table tennis
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Tennis racket
                 </li>
-                <li>
-                    <svg>
+                <li class="events-list-item">
+                    <svg width="24" height="24">
                         <use href="./images/icons.svg#"></use>
                     </svg>
                     Volleyball
                 </li>
             </ul>
             </div>
-            <div>
-                <h3>Casino</h3>
-                <ul class="list">
-                    <li><img width="120" height="130" src="./images/Frame 34217.jpg" alt="well oil be"></li>
-                    <li><img width="120" height="130" src="./images/Frame 34216.jpg" alt="queen of ice"></li>
-                    <li><img width="120" height="130" src="./images/Frame 34218.jpg" alt="lucky jack"></li>
-                    <li><img width="120" height="130" src="./images/Frame 34219.jpg" alt="hot cash"></li>
-                    <li><img width="120" height="130" src="./images/Frame 34220.jpg" alt="lucky jack"></li>
-                    <li><img width="120" height="130" src="./images/Frame 34221.jpg" alt="royal coins"></li>
+            <div class="casino-container">
+                <h3 class="casino-title">Casino</h3>
+                <ul class="list img-wrap">
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34217.jpg" alt="well oil be"></li>
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34216.jpg" alt="queen of ice"></li>
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34218.jpg" alt="lucky jack"></li>
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34219.jpg" alt="hot cash"></li>
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34220.jpg" alt="lucky jack"></li>
+                    <li class="img-wrap-item"><img width="120" height="130" src="./images/Frame 34221.jpg" alt="royal coins"></li>
                 </ul>
             </div>
-        </section>
+        </aside>
 
+        <div class="content">
         <!-- MOBILE APP -->
          <section>
             <div class="container">
@@ -295,7 +337,7 @@
                 <div>
                     <h3>bonus offer</h3>
                     <div>
-                        <ul>
+                        <ul class="list">
                             <li>
                                 <svg width="24" height="24">
                                     <use href="./images/icons.svg#yellow-star"></use>
@@ -353,7 +395,7 @@
                 <div>
                     <h3>betting variety</h3>
                     <div>
-                        <ul>
+                        <ul class="list">
                             <li>
                                 <svg width="24" height="24">
                                     <use href="./images/icons.svg#yellow-star"></use>
@@ -411,7 +453,7 @@
                 <div>
                     <h3>mobile expirience</h3>
                     <div>
-                        <ul>
+                        <ul class="list">
                             <li>
                                 <svg width="24" height="24">
                                     <use href="./images/icons.svg#yellow-star"></use>
@@ -469,7 +511,7 @@
                 <div>
                     <h3>payment options</h3>
                     <div>
-                        <ul>
+                        <ul class="list">
                             <li>
                                 <svg width="24" height="24">
                                     <use href="./images/icons.svg#yellow-star"></use>
@@ -535,39 +577,39 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td>Website</td>
+                                <td>🌐 Website</td>
                                 <td>casinoname.com</td>
                             </tr>
                             <tr>
-                                <td>Game Types:</td>
+                                <td>🕹 Game Types:</td>
                                 <td>Sportsbook, Casino, Live Games, Live Casino</td>
                             </tr>
                             <tr>
-                                <td>Deposit methods:</td>
+                                <td>💸 Deposit methods:</td>
                                 <td>Visa, Masterscard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer, Entropay, ecoPayz, Neosurf</td>
                             </tr>
                             <tr>
-                                <td>Withdrawal methods:</td>
+                                <td>💳 Withdrawal methods:</td>
                                 <td>Visa, Mastercard, Maestro, PayPal, Skrill, Neteller, Trustly, Bitcoin, Bank Transfer, Entropay, ecoPayz, Neosurf</td>
                             </tr>
                             <tr>
-                                <td>Betting functions:</td>
+                                <td>🤑 Betting functions:</td>
                                 <td>Live betting, cash out</td>
                             </tr>
                             <tr>
-                                <td>Casino game types:</td>
+                                <td>🎰 Casino game types:</td>
                                 <td>Slots, table games</td>
                             </tr>
                             <tr>
-                                <td>Casino provider:</td>
+                                <td>🕺 Casino provider:</td>
                                 <td>1X2 Network, Amatic Industries, Apollo Games, Asia Gaming and more</td>
                             </tr>
                             <tr>
-                                <td>Apps:</td>
+                                <td>📱 Apps:</td>
                                 <td>iPhone, Android</td>
                             </tr>
                             <tr>
-                                <td>Founded Year:</td>
+                                <td>🏠 Founded Year:</td>
                                 <td>2017</td>
                             </tr>
                         </tbody>
@@ -712,32 +754,27 @@
                     <div>
                         <div>
                             <h3>question</h3>
-                            <svg>
-                                <use href="./images/icons.svg#"></use>
-                            </svg>
+                            <div>&#9660;</div>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
                     <div>
                         <div>
                             <h3>question</h3>
-                            <svg>
-                                <use href="./images/icons.svg#"></use>
-                            </svg>
+                            <div>&#9660;</div>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
                     <div>
                         <div>
                             <h3>question</h3>
-                            <svg>
-                                <use href="./images/icons.svg#"></use>
-                            </svg>
+                            <div>&#9660;</div>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
                 </div>
              </section>
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -752,5 +789,6 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="./select.js"></script>
 </body>
 </html>
