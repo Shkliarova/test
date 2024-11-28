@@ -8,6 +8,7 @@
     --accent-color: #EC622B;
     --event-text-color: #7C7C7C;
     --list-color: #F6F6F6;
+    --table-border: #C5C5C5;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -409,7 +410,7 @@ body{
     height: 102px;
     background-color: var(--list-color);
     border-radius: 6px;
-    border-right: 1px solid var(--event-text-color);
+    border-right: 1px solid var(--table-border);
 }
 
 .categories-list-item:hover, .categories-list-item:focus{
@@ -528,4 +529,87 @@ body{
 .raiting-star-list{
     display: flex;
     gap: 8px;
+}
+
+/* FACTS */
+.facts-container-wrap{
+    background-color: var(--second-dominant-color);
+    padding: 32px 20px 24px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.facts-table{
+    width: 850px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.facts-title{
+    max-width: 269px;
+    border-bottom: 2px solid var(--table-border);
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 18px;
+}
+
+.tbody{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.table-item{
+    border-bottom: 1px solid var(--table-border);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.first-cell{
+    font-weight: 500;
+    padding: 8px 16px;
+    width: 230px;
+}
+
+.second-cell{
+    padding: 8px 16px;
+}
+
+/* REVIEWS */
+.reviews-container-wrap{
+    background-color: var(--second-dominant-color);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 32px 20px;
+}
+
+.reviews-title{
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 57.6px;
+    font-weight: 700px;
+}
+
+.reviews-text{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.review-litle-title{
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700px;
+}
+
+.minus{
+    margin-right: 6px;
+}
+
+.num{
+    margin-right: 8px;
+    color: var(--hover-color);
 }
