@@ -9,6 +9,7 @@
     --event-text-color: #7C7C7C;
     --list-color: #F6F6F6;
     --table-border: #C5C5C5;
+    --players-bg: #E2EAF7;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -126,7 +127,15 @@ body{
 .selected-option {
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+
+.select-span{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 20.48px;
+    margin-left: 10px;
+    margin-right: 4px;
 }
 
 .options {
@@ -591,18 +600,23 @@ body{
     font-size: 48px;
     line-height: 57.6px;
     font-weight: 700px;
+    margin-bottom: 24px;
 }
 
 .reviews-text{
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 24px;
+    display: flex;
 }
 
 .review-litle-title{
     font-size: 40px;
     line-height: 48px;
     font-weight: 700px;
+    margin-bottom: 24px;
+    margin-top: 36px;
+    text-transform: uppercase;
 }
 
 .minus{
@@ -612,4 +626,187 @@ body{
 .num{
     margin-right: 8px;
     color: var(--hover-color);
+}
+
+.reviews-btn{
+    margin-top: 8px;
+    background-color: var(--accent-color);
+    padding: 14px 0;
+    color: var(--second-dominant-color);
+    font-size: 16px;
+    line-height: 20.48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 127px;
+    box-shadow: 0px 4px 18px rgba(14, 24, 17, 0.25);
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* PLAYERS */
+.players-container-wrap{
+    background-color: var(--second-dominant-color);
+    padding: 20px 20px 26px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.players-title-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.players-title{
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.players-list{
+    display: flex;
+    gap: 17px;
+}
+
+.players-list-item{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--players-bg);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.players-wrap{
+    display: flex;
+    gap: 19px;
+}
+
+.players-wrap-item{
+    padding: 32px 20px 32px 32px;
+    background-color: var(--players-bg);
+    border-radius: 6px;
+    display: flex;
+    gap: 31px;
+    display: flex;
+    align-items: center;
+}
+
+.player-text-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.players-name{
+    text-transform: uppercase;
+    font-weight: 600px;
+    font-size: 16px;
+    line-height: 19.2px;
+    width: 179px;
+}
+
+.players-text{
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 241px;
+}
+
+.players-text-grade{
+    font-size: 12px;
+    line-height: 14.4px;
+}
+
+.player-name-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg-wrap{
+    display: flex;
+    gap: 6px;
+}
+
+/* SUPPORT */
+.support-container-wrap{
+    background-color: var(--second-dominant-color);
+    background-image: url(./images/image1946.jpg);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.support-title{
+    font-size: 48px;
+    font-weight: 700px;
+    line-height: 57.6px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.support-list{
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 35px;
+}
+
+.support-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--dominant-color);
+}
+
+.support-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20.48px;
+    font-weight: 600;
+    color: var(--dominant-color);
+}
+
+.support-table-body{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.support-row{
+    display: flex;
+    gap: 26px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--dominant-color);
+    width: 886px;
+}
+
+.support-first-cell{
+    display: flex;
+    gap: 16px;
+    width: 252px;
+}
+
+.support-second-cell{
+    width: 480px;
+}
+
+.support-accent-link{
+    color: var(--hover-color);
+}
+
+.click-here{
+    font-weight: 600;
 }

@@ -55,8 +55,14 @@
         </nav>
         <div class="custom-select">
             <div class="selected-option">
-                <img src="./images/image1943.jpg" width="24" height="24" alt="flag"> AT
-                <div>&#9660;</div>
+                <img src="./images/image1943.jpg" width="24" height="24" alt="flag"> 
+                <span class="select-span">AT</span>
+                <svg width="24" height="24">
+                    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-down">
+                      <path d="M19 8.5L12 15.5L5 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </symbol>
+                    <use href="#arrow-down"></use>
+                </svg>
             </div>
             <ul class="list options">
                 <li>
@@ -653,7 +659,7 @@
                 <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim nunc neque tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
                 <h3 class="review-litle-title">lineup of the sports</h3>
                 <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim nunc neque tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
-                <h3>betting types</h3>
+                <h3 class="review-litle-title">betting types</h3>
                 <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim nunc neque tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
                 <h3 class="review-litle-title">live betting</h3>
                 <ul class="list">
@@ -665,107 +671,144 @@
                     <li class="reviews-text"><span class="num">3</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus.</li>
                 </ul>
                 <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim nunc neque tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
-                <div>sign up</div>
+                <div class="reviews-btn">sign up</div>
             </div>
           </section>
 
           <!-- PLAYERS -->
-           <section>
+           <section class="players-container-wrap">
             <div class="container">
-                <div>
-                    <h2>what other players have to say</h2>
-                    <ul class="list">
-                        <li>
-                            <svg width="17" height="1">
+                <div class="players-title-wrap">
+                    <h2 class="players-title">what other players have to say</h2>
+                    <ul class="list players-list">
+                        <li class="players-list-item">
+                            <svg width="17" height="17">
                                 <use href="./images/icons.svg#arrow-left"></use>
                             </svg>
                         </li>
-                        <li>
-                            <svg width="17" height="1">
+                        <li class="players-list-item">
+                            <svg width="17" height="17">
                                 <use href="./images/icons.svg#arrow-right"></use>
                             </svg>
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <div>
+                <div class="players-wrap">
+                    <div class="players-wrap-item">
                         <img src="./images/ic_baseline-rate-review.jpg" width="109" alt="player">
-                        <div>
-                            <h3>joshua</h3>
-                            <svg width="16" height="16">
-                                <use href="./images/icons.svg#black-star"></use>
-                            </svg>
-                            <p>4.5</p>
+                        <div class="player-text-wrap">
+                            <div class="player-name-wrap">
+                                <h3 class="players-name">joshua</h3>
+                                <div class="svg-wrap">
+                                    <svg width="16" height="16">
+                                        <use href="./images/icons.svg#black-star"></use>
+                                    </svg>
+                                    <p class="players-text-grade">4.5</p>
+                                </div>
+                            </div>
+                            <p class="players-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                     </div>
-                    <div>
+                    <div class="players-wrap-item">
                         <img src="./images/ic_baseline-rate-review(1).jpg" width="109" alt="player">
-                        <div>
-                            <h3>mark</h3>
-                            <svg width="16" height="16">
-                                <use href="./images/icons.svg#black-star"></use>
-                            </svg>
-                            <p>4.5</p>
+                        <div class="player-text-wrap">
+                            <div class="player-name-wrap">
+                                <h3 class="players-name">mark</h3>
+                                <div class="svg-wrap">
+                                    <svg width="16" height="16">
+                                        <use href="./images/icons.svg#black-star"></use>
+                                    </svg>
+                                    <p class="players-text-grade">4.5</p>
+                                </div>
+                            </div>
+                            <p class="players-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget.</p>
                     </div>
                 </div>
             </div>
            </section>
 
            <!-- SUPPORT -->
-            <section>
+            <section class="support-container-wrap">
                 <div class="container">
-                    <h2>customer support</h2>
+                    <h2 class="support-title">customer support</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat egestas eget purus, in dapibus imperdiet quis eget. Curabitur semper volutpat cras elementum. Eget ultrices donec urna tellus duis ullamcorper consequat. Enim nunc neque tristique adipiscing varius sit tristique. Sit parturient eget pharetra, suspendisse. Turpis ut odio lorem sapien congue. Pulvinar id in mollis faucibus ut. Magna in neque tristi</p>
-                    <ul class="list">
-                    <li>
-                        <a class="link" href="">
+                    <ul class="list support-list">
+                    <li class="support-list-item">
+                        <a class="link support-link" href="">
                             <svg width="24" height="24">
                                 <use href="./images/icons.svg#chat"></use>
                             </svg>
-                        chat
+                        <span>chat</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="link" href="">
+                    <li class="support-list-item">
+                        <a class="link support-link" href="">
                             <svg width="24" height="24">
                                 <use href="./images/icons.svg#phone"></use>
                             </svg>
-                        phone
+                        <span>phone</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="link" href="">
+                    <li class="support-list-item">
+                        <a class="link support-link" href="">
                             <svg width="24" height="24">
                                 <use href="./images/icons.svg#email"></use>
                             </svg>
-                        email
+                        <span>email</span>
                         </a>
                     </li>
                     </ul>
                     <table>
-                        <tbody>
-                            <tr>
-                                <td>Email Technical Support</td>
-                                <td>example@mail.com</td>
+                        <tbody class="support-table-body">
+                            <tr class="support-row">
+                                <td class="support-first-cell">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#email"></use>
+                                    </svg>
+                                    <p>Email Technical Support</p>
+                                </td>
+                                <td class="support-second-cell">
+                                    <a class="link support-accent-link" href="mailto:example@mail.com">example@mail.com</a>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Online Partnership Queries</td>
-                                <td>examplesupport@mail.com</td>
+                            <tr class="support-row">
+                                <td class="support-first-cell">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#email"></use>
+                                    </svg>
+                                    <p>Online Partnership Queries</p>
+                                </td>
+                                <td class="support-second-cell">
+                                    <a class="link support-accent-link" href="mailto:examplesupport@mail.com">examplesupport@mail.com</a>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Live chat</td>
-                                <td>Available</td>
+                            <tr class="support-row">
+                                <td class="support-first-cell">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#chat"></use>
+                                    </svg>
+                                    <p>Live chat</p>
+                                </td>
+                                <td class="support-second-cell">Available</td>
                             </tr>
-                            <tr>
-                                <td>Address</td>
-                                <td>Broadway, 12, Lyric building, block 1, 1st floor, Flat/Office 15, 29000, Oslo, Norway</td>
+                            <tr class="support-row">
+                                <td class="support-first-cell">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#location"></use>
+                                    </svg>
+                                    <p>Address</p>
+                                </td>
+                                <td class="support-second-cell">Broadway, 12, Lyric building, block 1, 1st floor, Flat/Office 15, 29000, Oslo, Norway</td>
                             </tr>
-                            <tr>
-                                <td>Broadway, 12, Lyric building, block 1, 1st floor, Flat/Office 15, 29000, Oslo, Norway</td>
-                                <td>Click here</td>
+                            <tr class="support-row">
+                                <td class="support-first-cell">
+                                    <svg width="24" height="24">
+                                        <use href="./images/icons.svg#googleMap"></use>
+                                    </svg>
+                                    <p>Google Maps</p>
+                                </td>
+                                <td class="support-second-cell support-accent-link click-here">Click here</td>
                             </tr>
                         </tbody>
                     </table>
@@ -779,21 +822,36 @@
                     <div>
                         <div>
                             <h3>question</h3>
-                            <div>&#9660;</div>
+                            <svg width="24" height="24">
+                                <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-down">
+                                  <path d="M19 8.5L12 15.5L5 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </symbol>
+                                <use href="#arrow-down"></use>
+                            </svg>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
                     <div>
                         <div>
                             <h3>question</h3>
-                            <div>&#9660;</div>
+                            <svg width="24" height="24">
+                                <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-down">
+                                  <path d="M19 8.5L12 15.5L5 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </symbol>
+                                <use href="#arrow-down"></use>
+                            </svg>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
                     <div>
                         <div>
                             <h3>question</h3>
-                            <div>&#9660;</div>
+                            <svg width="24" height="24">
+                                <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-down">
+                                  <path d="M19 8.5L12 15.5L5 8.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </symbol>
+                                <use href="#arrow-down"></use>
+                            </svg>
                         </div>
                         <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
                     </div>
