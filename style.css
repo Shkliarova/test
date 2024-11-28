@@ -25,11 +25,6 @@ img{
     display: block;
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-}
-
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -201,6 +196,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     gap: 20px;
+    justify-content: center;
 }
 
 .content {
@@ -809,4 +805,113 @@ body{
 
 .click-here{
     font-weight: 600;
+}
+
+/* FAQ */
+.faq-container-wrap{
+    background-color: var(--second-dominant-color);
+    border-radius: 6px;
+    padding: 30px 20.5px;
+    margin-bottom: 20px;
+}
+
+.faq-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57.6px;
+    margin-left: 6.5px;
+    margin-bottom: 32px;
+}
+
+.faq-litle-title{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.litle-title-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgba(119, 119, 119, 0.5);
+}
+
+.question{
+    display: none;
+    padding: 16px 12px;
+    background-color: var(--players-bg);
+}
+
+.faq-toggle {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.faq-toggle.rotate {
+    transform: rotate(180deg);
+}
+
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* FOOTER */
+.footer{
+    padding: 36px 20px;
+    background-color: var(--second-dominant-color);
+    border-radius: 6px;
+}
+
+.footer-wrap{
+    display: flex;
+    gap: 16px;
+}
+
+.footer-text{
+    width: 782px;
+    height: 148px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.footer-limit{
+    width: 85px;
+    height: 85px;
+    border: 1px solid var(--dominant-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.footer-btn-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+
+.footer-btn{
+    background-color: var(--bg-color);
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 40.96px;
+    color: var(--second-dominant-color);
+}
+
+.btn1{
+    padding: 6px 30px;
+}
+
+.btn2{
+    padding: 6px 0;
+    width: 253px;
+    text-align: center;
 }
