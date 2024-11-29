@@ -258,6 +258,8 @@ body{
 
 .events-list-item{
     padding: 8px 0 8px 12px;
+    display: flex;
+    gap: 12px;
 }
 
 .events-list-item:hover, .events-list-item:focus{
