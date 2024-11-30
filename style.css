@@ -99,6 +99,12 @@ body{
     font-size: 12px;
     font-weight: 600;
     line-height: 18px;
+    color: var(--second-dominant-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .header-nav-item:hover, .header-nav-item:focus{
+    background-color: var(--bg-color);
   }
 
   .nav-svg{
@@ -111,7 +117,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 8px 16px;
-    background: var(--bg-color);
+    background-color: var(--bg-color);
     border-radius: 16px;
     cursor: pointer;
     color: var(--second-dominant-color);
@@ -119,6 +125,11 @@ body{
     font-size: 12px;
     font-weight: 600;
     line-height: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-select:hover, .custom-select:focus{
+    background-color: var(--block-container);
 }
 
 .selected-option {
@@ -154,6 +165,7 @@ body{
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .options li:hover {
@@ -181,6 +193,11 @@ body{
     font-weight: 600;
     border-radius: 16px;
     line-height: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover, .signup-btn:focus{
+    background-color: var(--hover-color);
 }
 
 .login-btn{
@@ -191,6 +208,11 @@ body{
     font-weight: 600;
     border-radius: 16px;
     line-height: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover, .login-btn:focus{
+    background-color: var(--accent-color);
 }
 
 /* SIDEBAR */
@@ -264,6 +286,7 @@ body{
     padding: 8px 0 8px 12px;
     display: flex;
     gap: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .events-list-item:hover, .events-list-item:focus{
@@ -334,6 +357,11 @@ body{
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 16px;
+    transition: background-color 0.3s ease
+}
+
+.mobile-btn:hover, .mobile-btn:focus{
+    background-color: var(--bg-color);
 }
 
 /* HERO */
@@ -377,6 +405,7 @@ body{
 }
 
 .orange-btn{
+    display: inline-block;
     padding: 14px 0;
     width: 214px;
     text-align: center;
@@ -392,6 +421,11 @@ body{
     box-sizing: border-box;
     box-shadow: 0px 4px 18px rgba(14, 24, 17, 0.25);
     max-height: 48px;
+    transition: background-color 0.3s ease
+}
+
+.orange-btn:hover, .orange-btn:focus{
+    background-color: var(--hover-color);
 }
 
 .hero-extra-text{
@@ -428,6 +462,7 @@ body{
     background-color: var(--list-color);
     border-radius: 6px;
     border-right: 1px solid var(--table-border);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .categories-list-item:hover, .categories-list-item:focus{
@@ -647,6 +682,7 @@ body{
 }
 
 .reviews-btn{
+    display: inline-block;
     margin-top: 8px;
     background-color: var(--accent-color);
     padding: 14px 0;
@@ -660,6 +696,11 @@ body{
     border-radius: 16px;
     text-align: center;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reviews-btn:hover, .reviews-btn:focus{
+    background-color: var(--hover-color);
 }
 
 /* PLAYERS */
